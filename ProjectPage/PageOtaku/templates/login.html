@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{title}}{% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/estilos-login.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='fonts/style.css')}}">
+</head>
+<body>
+    <div class="container-form">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="registro_enviado" id="message">
+            <i class="icon-checkmark"></i>
+            <strong>{{message}}</strong>  
+            <a href="javascript:cerrar()" class="close_message"><i class="icon-cancel-circle"></i></a>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <div class="container">
+            <div class="title">
+                <span>Iniciar Sesion</span>
+            </div>
+            <form action="/login" method="POST">
+                <div class="row">
+                    <i class="icon-user1"></i>
+                    <input type="text" placeholder="Usuario" name="usuario" required>
+                </div>
+                <div class="row">
+                    <i class="icon-locked"></i>
+                    <input type="password" placeholder="Contraseña" name="password" required>
+                </div>
+                <div class="pass">
+                    <a href="#">Olvidaste tu contraseña?</a>
+                </div>
+                <div class="row button">
+                    <input type="submit" value="Iniciar Sesion">
+                </div>
+                <div class="sing-up">
+                    No estas registrado?
+                    <a href="/sing-up">Registrate ahora</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

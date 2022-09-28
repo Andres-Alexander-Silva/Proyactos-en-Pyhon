@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{title}}{% endblock %</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/estilos-usuarios.css')}}">
+</head>
+<body>
+    {% extends "base/base.html" %}
+    {% block content %}
+        <div class="container">
+            <div class="card-container">
+                <div class="header">
+                    <i><img src="{{url_for('static', filename='img/zero-two.jpg')}}" alt="imagen"></i>
+                    <h2>Nombre Perfil</h2>
+                    <h4>Nombre Usuario</h4>
+                </div>
+                <div class="information">
+                    <div>
+                        <p><strong>Nombre:</strong> Andres Alexander</p>
+                        <p><strong>Apellido:</strong> Silva Pelaez</p>
+                        <p><strong>Usuario:</strong> AndresSilva26</p>
+                        <p><strong>Email:</strong> andressilva@gmail.com</p>
+                        <p><strong>Edad:</strong> 18 años</p>
+                        <p><strong>Genero:</strong> Masculino</p>
+                        <p><strong>telefono:</strong> 320548387</p>
+                        <p><strong>Anime Fav:</strong> Toradora</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+</body>
+</html>

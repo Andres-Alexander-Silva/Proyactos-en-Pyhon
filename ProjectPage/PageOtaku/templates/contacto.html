@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{title}}{% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='fonts/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/estilos-contacto.css')}}">
+</head>
+<body>
+    {% extends "base/base.html" %}
+    {% block content %}
+    <div class="contenedor-form">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="mensaje_envio" id="message">
+            <i class="icon-checkmark"></i>
+            <strong>{{message}}</strong>  
+            <a href="javascript:cerrar()" class="close_message"><i class="icon-cancel-circle"></i></a>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %} 
+        <div class="contenedor">
+            <div class="titulo">
+                <span>Contactanos</span>
+            </div>
+            <form action="/contacto" method="POST">
+                <div class="fila">
+                    <i class="icon-address-book"></i>
+                    <input type="text" placeholder="Nombre" name="nombre_env" required>
+                </div>
+                <div class="fila">
+                    <i class="icon-envelop"></i>
+                    <input type="email" placeholder="Correo" name="correo" required>
+                </div>
+                <div class="fila">
+                    <i class="icon-envelope"></i>
+                    <input type="text" placeholder="Asunto" name="asunto" required>
+                </div>
+                <div class="fila">
+                    <i class="icon-email icon"></i>
+                    <textarea class="mensaje" placeholder="Mensaje aqui...." name="mensaje" required></textarea>
+                </div>
+                <div class="fila1 boton">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endblock %}
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+</body>
+</html>

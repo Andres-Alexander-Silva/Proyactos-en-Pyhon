@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <title>{% block title %}Otakun{% endblock %}</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/estilos-home.css')}}">
+</head>
+<body>
+  {% extends "base/base.html" %}
+  <!-- Contenido Cambiante -->
+  {% block content%}
+    <!-- Contenido Principal de la pagina -->
+    <main class="main columns">
+    <!-- Titulo de la primera seccion -->
+      <div class="title">
+        <h2 class="texto">Acerca De</h2>
+      </div>
+      <!-- Contenido de la primera seccion -->
+      <section class="column main-column">
+        <!-- Primer articulo -->
+        <div class="content1">
+          <figure class="image im45">
+            <img src="{{ url_for('static', filename='img/Kimetsu.jpg')}}" alt="image">
+          </figure>
+          <div class="content-body">
+            <h2 class="title-content">Quienes Somos</h2>
+            <p class="text-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis vitae nulla ad aut distinctio deserunt explicabo quod perferendis optio impedit, fugiat assumenda excepturi soluta delectus suscipit quis ipsum? Minima pariatur voluptatibus, quas perferendis magni magnam, voluptatem qui totam cupiditate suscipit aspernatur. Aperiam, quae. Optio eligendi voluptas mollitia, numquam accusamus eos debitis nisi, a ipsam voluptatem amet impedit laboriosam aut libero.</p>
+          </div>
+        </div>
+      </section>
+      <section class="column main-column">
+        <!-- Segundo articulo -->
+        <div class="content1">
+          <figure class="image im45">
+            <img src="{{url_for('static', filename='img/244652.jpg')}}" alt="image">
+          </figure>
+          <div class="content-body">
+            <h2 class="title-content">Que Hacemos</h2>
+            <p class="text-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis vitae nulla ad aut distinctio deserunt explicabo quod perferendis optio impedit, fugiat assumenda excepturi soluta delectus suscipit quis ipsum? Minima pariatur voluptatibus, quas perferendis magni magnam, voluptatem qui totam cupiditate suscipit aspernatur. Aperiam, quae. Optio eligendi voluptas mollitia, numquam accusamus eos debitis nisi, a ipsam voluptatem amet impedit laboriosam aut libero.</p>
+          </div>
+        </div>
+      </section>
+      <!-- Titulo segunda seccion -->
+      <div class="title1">
+        <h2 class="texto">Animes Recomendados</h2>
+      </div>
+      <!-- Contenido de la segunda seccion -->
+      <section class="container2">
+        <div class="container-box">
+          <!-- Primer articulo -->
+          <div class="box">
+            <div class="img-box">
+              <img src="{{url_for('static', filename='img/kimetsu1.jpg')}}" alt="Cargando imagen">
+            </div>
+            <div class="content-box">
+              <h2>Kimetsu No Yaiba<br><span><a class="enlace-box" href="#">Saber sobre el</a></span></h2>
+            </div>
+          </div>
+          <!-- Segundo Articulo -->
+          <div class="box">
+            <div class="img-box">
+              <img src="{{url_for('static', filename='img/Shumatsu.jpg')}}" alt="Cargando imagen">
+            </div>
+            <div class="content-box">
+              <h2>Shumatsu no Valkyrie<br><span><a class="enlace-box" href="#">Saber sobre el</a>
+              </span></h2>
+            </div>
+          </div>
+          <!-- Tercer articulo -->
+          <div class="box">
+            <div class="img-box">
+              <img src="{{url_for('static', filename='img/assasination.jpg')}}" alt="Cargando imagen">
+            </div>
+            <div class="content-box">
+              <h2>Assasination Classroom<br><span><a class="enlace-box" href="#">Saber sobre el</a>
+              </span></h2>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  {% endblock %}
+  <!-- Fin contenido cambiante -->
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>

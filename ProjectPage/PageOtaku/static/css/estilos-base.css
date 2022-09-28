@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* Estilos universales */
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif;
+}
+/* Inicio estilos encabezado */
+h1{
+    font-size: 40px;
+    color: #fff;
+    padding-left: 15px;
+    display: inline-block;
+}
+.heading{
+    background: #212F3C;
+    padding: 5px;
+}
+.enlace{
+    font-size: 17px;
+    color: #fff;
+    float: right;
+    padding: 15px 20px;
+    font-weight: bold;
+    transition: all 500ms ease;
+    text-decoration: none;
+}
+/* Fin estilos encabezado */
+/* Estilos Barra de navegacion */
+.containerr{
+    background: #5F6A6A;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+}
+.item-nav{
+    color: #fff;
+    padding: 0 30px;
+    font-size: 25px;
+    font-weight: bold;
+    transition: all 500ms ease;
+    text-decoration: none;
+}
+.item-nav:hover{
+    text-decoration: none;
+    color: #fff;
+    background: #5499C7;
+    border-radius: 30px;
+}
+.enlace:hover{
+    text-decoration: none;
+    color: #fff;
+    background: #3498DB;
+    border-radius: 30px;
+}
+.icon-menu1{
+    color: #fff;   
+    font-size: 35px;
+    padding: 0 10px;
+    text-decoration: none;
+    display: none;
+}
+.icon-menu1:hover{
+    text-decoration: none;
+    color: #3498db;
+}
+/* Fin estilos de Barra de navegacion */
+/* Inicio estilos pie de pagina */
+.footer{
+    background: #212F3C;
+    padding: 5px;
+}
+.social{
+    font-size: 25px;
+    margin: 0 10px;
+}
+.social a{
+    color: #fff;
+    margin: 0 5px;
+    text-decoration: none;
+}
+.copy{
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+.text-title{
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+}
+/* Fin estilos pie de pagina */
+@media (max-width: 600px){
+    .containerr{
+        background: #5F6A6A;
+        flex-direction: column;
+    }
+    .item-nav{
+        margin: 10px 0;
+    }
+    .icon-menu1{
+        display: inline-block;        
+    }
+    .hide{
+        display: none;
+    }
+    .copy, .social{
+        padding-top: 10px;
+        line-height: 30px;
+    }
+    .social a{
+        font-size: 30px;
+    }
+}

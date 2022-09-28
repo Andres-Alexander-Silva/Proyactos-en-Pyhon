@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{title}}{% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/estilos-singup.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='fonts/style.css')}}">
+</head>
+<body>
+    <div class="conatainer-form">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="registro_enviado" id="message">
+            <i class="icon-checkmark"></i>
+            <strong>{{message}}</strong>  
+            <a href="javascript:cerrar()" class="close_message"><i class="icon-cancel-circle"></i></a>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <div class="container">
+            <div class="title">
+                <span>Registrar</span>
+            </div>
+            <form action="/sing-up" method="POST">
+                <div class="row">
+                    <i class="icon-address-book"></i>
+                    <input type="text" placeholder="Nombre" name="nombre_registro" required>
+                </div>
+                <div class="row">
+                    <i class="icon-address-book"></i>
+                    <input type="text" placeholder="Apellido" name="apellido_registro" required>
+                </div>
+                <div class="row">
+                    <i class="icon-envelop"></i>
+                    <input type="email" placeholder="Correo" name="email_registro" required>
+                </div>
+                <div class="row">
+                    <i class="icon-phone"></i>
+                    <input type="text" placeholder="Telefono" name="telefono_registro" required>
+                </div>
+                <div class="row">
+                    <i class="icon-address-book"></i>
+                    <input type="text" placeholder="Edad" name="edad_registro" required>
+                </div>
+                <div class="row">
+                    <i class="icon-man-woman"></i>
+                    <input type="text" placeholder="Genero" name="genero_registro" required>
+                </div>
+                <div class="row">
+                    <i class="icon-user1"></i>
+                    <input type="text" placeholder="Usuario" name="usuario_registro" required>
+                </div>
+                <div class="row">
+                    <i class="icon-locked"></i>
+                    <input type="password" placeholder="Contraseña" name="pass_registro" required>
+                </div>
+                <!-- <div class="terminos">
+                    <p>Al registrarte aceptas los terminos<br>y condiciones de privacidad</p>
+                </div> -->
+                <div class="row-btn bottom">
+                    <input type="submit" value="Registrarse">
+                </div>
+                <div class="login">
+                    Ya tienes una cuenta?
+                    <a href="/login">Inicia Sesion</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+</body>
+</html>
